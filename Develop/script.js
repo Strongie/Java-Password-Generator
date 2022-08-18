@@ -19,7 +19,7 @@ var toUpper = function (x) {
 alpha2 = alpha.map(toUpper);
 
 
-
+// Event Listener
 generateBtn.addEventListener("click", function () {
     ps = generatePassword();
     document.getElementById("password").placeholder = ps;
@@ -34,7 +34,7 @@ function generatePassword() {
         alert("This needs a value");
     } else if (enter < 8 || enter > 128) {
         // Validates user input
-        // Start user input prompts
+        // Start user input prompts. parseInt changes string to interger
         enter = parseInt(prompt("You must choose between 8 and 128"));
 
     } else {
@@ -121,7 +121,7 @@ function generatePassword() {
 // This puts the password value into the textbox
 // Changed function input to use textcontent
 function UserInput(ps) {
-    document.getElementById("password").textContent = ps;
+  document.getElementById("password").textContent = ps;
 
 }
 
